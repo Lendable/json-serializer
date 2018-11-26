@@ -1,5 +1,5 @@
 {
-  "name": "lendable/json",
+  "name": "lendable/json-serializer",
   "description": "Json Abstraction",
   "type": "library",
   "authors": [
