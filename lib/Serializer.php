@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Lendable\Json;
 
-use Lendable\Machine\Json\Exception\InvalidDeserializedData;
-
 final class Serializer
 {
     /**

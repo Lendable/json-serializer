@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Lendable\Machine\Json\Exception;
-
-use Lendable\Json\Failure;
+namespace Lendable\Json;
 
 class InvalidDeserializedData extends \RuntimeException implements Failure
 {
