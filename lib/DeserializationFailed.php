@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Lendable\Json;
 
-final class JsonSerializeFailed extends \RuntimeException implements JsonFailure
+final class DeserializationFailed extends \RuntimeException implements Failure
 {
     public function __construct(int $errorCode, string $errorMessage, ?\Throwable $previous = null)
     {
         parent::__construct(
             \sprintf(
-                'Failed to serialize data to JSON. Error code: %d, error message: %s.',
+                'Failed to deserialize data from JSON. Error code: %d, error message: %s.',
                 $errorCode,
                 $errorMessage
             ),

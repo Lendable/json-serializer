@@ -1,6 +1,6 @@
 {
   "name": "lendable/json-serializer",
-  "description": "Json Abstraction",
+  "description": "JSON serializer/deserializer with an OOP interface",
   "type": "library",
   "authors": [
     {

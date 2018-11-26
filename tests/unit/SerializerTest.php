@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Tests\Lendable\Json\Unit;
 
-use Lendable\Json\JsonDeserializeFailed;
-use Lendable\Json\JsonSerializeFailed;
-use Lendable\Json\JsonSerializer;
+use Lendable\Json\DeserializationFailed;
+use Lendable\Json\SerializationFailed;
+use Lendable\Json\Serializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Lendable\Json\JsonSerializer
- * @covers \Lendable\Json\JsonSerializeFailed
- * @covers \Lendable\Json\JsonDeserializeFailed
+ * @covers \Lendable\Json\Serializer
+ * @covers \Lendable\Json\SerializationFailed
+ * @covers \Lendable\Json\DeserializationFailed
  */
-final class JsonSerializerTest extends TestCase
+final class SerializerTest extends TestCase
 {
     /**
-     * @var JsonSerializer
+     * @var Serializer
      */
     private $serializer;
 
@@ -36,7 +36,7 @@ final class JsonSerializerTest extends TestCase
      */
     public function it_throws_when_serializing_if_an_error_encountered(): void
     {
-        $this->expectException(JsonSerializeFailed::class);
+        $this->expectException(SerializationFailed::class);
         $this->expectExceptionMessage('Failed to serialize data to JSON. Error code: 5, error message: Malformed UTF-8 characters, possibly incorrectly encoded.');
 
         $this->serializer->serialize(["\xf0\x28\x8c\xbc" => 'bar']);
@@ -57,7 +57,7 @@ final class JsonSerializerTest extends TestCase
      */
     public function it_throws_when_deserializing_if_an_error_encountered(): void
     {
-        $this->expectException(JsonDeserializeFailed::class);
+        $this->expectException(DeserializationFailed::class);
         $this->expectExceptionMessage('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
 
         $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
@@ -65,6 +65,6 @@ final class JsonSerializerTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->serializer = new JsonSerializer();
+        $this->serializer = new Serializer();
     }
 }
