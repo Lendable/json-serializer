@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Lendable\Json\Unit;
 
 use Lendable\Json\DeserializationFailed;
+use Lendable\Json\InvalidDeserializedData;
 use Lendable\Json\SerializationFailed;
 use Lendable\Json\Serializer;
 use PHPUnit\Framework\TestCase;
@@ -13,6 +14,7 @@ use PHPUnit\Framework\TestCase;
  * @covers \Lendable\Json\Serializer
  * @covers \Lendable\Json\SerializationFailed
  * @covers \Lendable\Json\DeserializationFailed
+ * @covers \Lendable\Json\InvalidDeserializedData
  */
 final class SerializerTest extends TestCase
 {
@@ -61,6 +63,17 @@ final class SerializerTest extends TestCase
         $this->expectExceptionMessage('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
 
         $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
+    }
+
+    /**
+     * @test
+     */
+    public function it_throws_when_deserializing_if_the_result_is_not_an_array(): void
+    {
+        $this->expectExceptionMessage(InvalidDeserializedData::class);
+        $this->expectExceptionMessage('Expected array when deserializing JSON, got "boolean".');
+
+        $this->serializer->deserialize('true');
     }
 
     protected function setUp(): void
