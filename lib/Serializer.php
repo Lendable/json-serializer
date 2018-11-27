@@ -7,8 +7,6 @@ namespace Lendable\Json;
 final class Serializer
 {
     /**
-     * @param mixed $data
-     *
      * @throws SerializationFailure
      */
     public function serialize(array $data): string
