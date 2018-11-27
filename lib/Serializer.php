@@ -9,9 +9,9 @@ final class Serializer
     /**
      * @param mixed $data
      *
-     * @throws Failure
+     * @throws SerializationFailure
      */
-    public function serialize($data): string
+    public function serialize(array $data): string
     {
         $serialized = \json_encode($data);
 
@@ -25,7 +25,8 @@ final class Serializer
     }
 
     /**
-     * @throws Failure
+     * @throws DeserializationFailure
+     * @throws InvalidDeserializedData
      */
     public function deserialize(string $json): array
     {
