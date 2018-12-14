@@ -9,7 +9,7 @@ final class Serializer
     /**
      * @throws SerializationFailure
      */
-    public function serialize(array $data): string
+    public static function serialize(array $data): string
     {
         $serialized = \json_encode($data);
 
@@ -26,7 +26,7 @@ final class Serializer
      * @throws DeserializationFailure
      * @throws InvalidDeserializedData
      */
-    public function deserialize(string $json): array
+    public static function deserialize(string $json): array
     {
         $data = \json_decode($json, true);
 

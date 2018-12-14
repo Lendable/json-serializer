@@ -28,7 +28,7 @@ final class SerializerTest extends TestCase
      */
     public function it_can_serialize_an_array_of_scalars_to_json(): void
     {
-        $result = $this->serializer->serialize(['foo' => 'bar', 'baz' => [1.03, true, 'foobar']]);
+        $result = $this->serializer::serialize(['foo' => 'bar', 'baz' => [1.03, true, 'foobar']]);
 
         $this->assertSame('{"foo":"bar","baz":[1.03,true,"foobar"]}', $result);
     }
@@ -41,7 +41,7 @@ final class SerializerTest extends TestCase
         $this->expectException(SerializationFailed::class);
         $this->expectExceptionMessage('Failed to serialize data to JSON. Error code: 5, error message: Malformed UTF-8 characters, possibly incorrectly encoded.');
 
-        $this->serializer->serialize(["\xf0\x28\x8c\xbc" => 'bar']);
+        $this->serializer::serialize(["\xf0\x28\x8c\xbc" => 'bar']);
     }
 
     /**
@@ -49,7 +49,7 @@ final class SerializerTest extends TestCase
      */
     public function it_can_deserialize_from_a_json_string_to_php_scalars(): void
     {
-        $result = $this->serializer->deserialize('{"foo":"bar","baz":[1.03,true,"foobar"]}');
+        $result = $this->serializer::deserialize('{"foo":"bar","baz":[1.03,true,"foobar"]}');
 
         $this->assertSame(['foo' => 'bar', 'baz' => [1.03, true, 'foobar']], $result);
     }
@@ -62,7 +62,7 @@ final class SerializerTest extends TestCase
         $this->expectException(DeserializationFailed::class);
         $this->expectExceptionMessage('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
 
-        $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
+        $this->serializer::deserialize('{"unclosed":"bad","object":"json"');
     }
 
     /**
@@ -73,7 +73,7 @@ final class SerializerTest extends TestCase
         $this->expectExceptionMessage(InvalidDeserializedData::class);
         $this->expectExceptionMessage('Expected array when deserializing JSON, got "boolean".');
 
-        $this->serializer->deserialize('true');
+        $this->serializer::deserialize('true');
     }
 
     protected function setUp(): void
