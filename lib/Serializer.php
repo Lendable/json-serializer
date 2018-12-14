@@ -7,7 +7,7 @@ namespace Lendable\Json;
 final class Serializer
 {
     /**
-     * @throws SerializationFailure
+     * @throws SerializationFailed
      */
     public function serialize(array $data): string
     {
@@ -23,7 +23,7 @@ final class Serializer
     }
 
     /**
-     * @throws DeserializationFailure
+     * @throws DeserializationFailed
      * @throws InvalidDeserializedData
      */
     public function deserialize(string $json): array
