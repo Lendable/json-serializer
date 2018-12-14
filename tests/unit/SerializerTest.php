@@ -28,9 +28,9 @@ final class SerializerTest extends TestCase
      */
     public function it_can_serialize_an_array_of_scalars_to_json(): void
     {
-        $result = $this->serializer->serialize(['foo' => 'bar', 'baz' => [1.03, true, 'foobar']]);
+        $result = $this->serializer->serialize(['foo' => 'bar', 'baz' => [1.03, true, 'foobar'], 'emoji' => '😃', 'with_forward_slash' => 'foo/bar']);
 
-        $this->assertSame('{"foo":"bar","baz":[1.03,true,"foobar"]}', $result);
+        $this->assertSame('{"foo":"bar","baz":[1.03,true,"foobar"],"emoji":"😃","with_forward_slash":"foo/bar"}', $result);
     }
 
     /**
