@@ -11,7 +11,7 @@ final class Serializer
      */
     public function serialize(array $data): string
     {
-        $serialized = \json_encode($data);
+        $serialized = \json_encode($data, \JSON_UNESCAPED_SLASHES | \JSON_UNESCAPED_UNICODE);
 
         if (\json_last_error() !== JSON_ERROR_NONE) {
             throw new SerializationFailed(\json_last_error(), \json_last_error_msg());
