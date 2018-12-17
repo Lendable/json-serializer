@@ -1,4 +1,4 @@
-Lendable JSON
+Lendable JSON Serializer
 =============
 Provides an object oriented interface for handling json in php.
 
