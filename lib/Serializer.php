@@ -7,17 +7,20 @@ namespace Lendable\Json;
 final class Serializer
 {
     /**
+     * @phpstan-param array<mixed> $data
+     *
      * @throws SerializationFailed
      */
     public function serialize(array $data): string
     {
-        $serialized = \json_encode($data, \JSON_UNESCAPED_SLASHES | \JSON_UNESCAPED_UNICODE);
+        try {
+            $serialized = \json_encode($data, \JSON_THROW_ON_ERROR | \JSON_UNESCAPED_SLASHES | \JSON_UNESCAPED_UNICODE);
+        } catch (\JsonException $exception) {
+            $errorCode = $exception->getCode();
+            \assert(\is_int($errorCode));
 
-        if (\json_last_error() !== JSON_ERROR_NONE) {
-            throw new SerializationFailed(\json_last_error(), \json_last_error_msg());
+            throw new SerializationFailed($errorCode, $exception->getMessage(), $exception);
         }
-
-        \assert(\is_string($serialized));
 
         return $serialized;
     }
@@ -25,13 +28,18 @@ final class Serializer
     /**
      * @throws DeserializationFailed
      * @throws InvalidDeserializedData
+     *
+     * @phpstan-return array<mixed>
      */
     public function deserialize(string $json): array
     {
-        $data = \json_decode($json, true);
+        try {
+            $data = \json_decode($json, true, 512, \JSON_THROW_ON_ERROR);
+        } catch (\JsonException $exception) {
+            $errorCode = $exception->getCode();
+            \assert(\is_int($errorCode));
 
-        if (\json_last_error() !== JSON_ERROR_NONE) {
-            throw new DeserializationFailed(\json_last_error(), \json_last_error_msg());
+            throw new DeserializationFailed($errorCode, $exception->getMessage(), $exception);
         }
 
         if (!\is_array($data)) {

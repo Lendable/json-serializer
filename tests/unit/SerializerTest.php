@@ -18,10 +18,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class SerializerTest extends TestCase
 {
-    /**
-     * @var Serializer
-     */
-    private $serializer;
+    private Serializer $serializer;
 
     /**
      * @test
