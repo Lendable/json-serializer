@@ -38,5 +38,3 @@ Deserializes a JSON string into an `array`.
 
 Throws `DeserializationFailed` on failure to deserialize.
 Throws `InvalidDeserializedData` if the data type of the resulting deserialized data is not an `array`.
-
-
