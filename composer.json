@@ -2,6 +2,7 @@
   "name": "lendable/json-serializer",
   "description": "JSON serializer/deserializer with an OOP interface",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Lendable Ltd",
