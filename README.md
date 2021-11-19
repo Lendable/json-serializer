@@ -1,5 +1,8 @@
 Lendable JSON Serializer
 =============
+[![Latest Stable Version](https://poser.pugx.org/lendable/json-serializer/v/stable)](https://packagist.org/packages/lendable/json-serializer)
+[![License](https://poser.pugx.org/lendable/json-serializer/license)](https://packagist.org/packages/lendable/json-serializer)
+
 Provides an opinionated object oriented interface for handling JSON serialization and deserialization in PHP. 
 
 ## Features
