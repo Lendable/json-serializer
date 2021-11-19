@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $finder = (new PhpCsFixer\Finder())
-    ->in(['lib', 'tests']);
+    ->in(['src', 'tests']);
 
 return (new PhpCsFixer\Config())
     ->setRules([

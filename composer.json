@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Lendable\\Json\\": "lib/"
+      "Lendable\\Json\\": "src/"
     }
   },
   "autoload-dev": {
@@ -49,14 +49,14 @@
       "PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --dry-run --diff --ansi --using-cache=no"
     ],
     "lint:php": [
-      "parallel-lint lib",
+      "parallel-lint src",
       "parallel-lint tests"
     ],
     "lint": [
       "@lint:php"
     ],
     "phpstan": [
-      "phpstan analyse  --memory-limit=-1 lib/ tests/ --ansi --no-progress"
+      "phpstan analyse  --memory-limit=-1 src/ tests/ --ansi --no-progress"
     ],
     "rector:check": [
       "rector --dry-run --ansi --no-progress-bar"

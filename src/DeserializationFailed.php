@@ -6,16 +6,19 @@ namespace Lendable\Json;
 
 final class DeserializationFailed extends \RuntimeException implements Failure
 {
-    public function __construct(int $errorCode, string $errorMessage, ?\Throwable $previous = null)
+    public function __construct(\JsonException $cause)
     {
+        $causeCode = $cause->getCode();
+        \assert(\is_int($causeCode));
+
         parent::__construct(
             \sprintf(
                 'Failed to deserialize data from JSON. Error code: %d, error message: %s.',
-                $errorCode,
-                $errorMessage
+                $causeCode,
+                $cause->getMessage(),
             ),
-            $errorCode,
-            $previous
+            $causeCode,
+            $cause,
         );
     }
 }
