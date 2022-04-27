@@ -3,24 +3,25 @@
 declare(strict_types=1);
 
 use Rector\CodeQuality\Rector\ClassMethod\DateTimeToDateTimeInterfaceRector;
+use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::PATHS, [__DIR__.'/src', __DIR__.'/tests']);
-    $parameters->set(Option::PHP_VERSION_FEATURES, PhpVersion::PHP_74);
-    $parameters->set(Option::PHPSTAN_FOR_RECTOR_PATH, __DIR__.'/phpstan-rector.neon');
-    $parameters->set(Option::PARALLEL, true);
-    $parameters->set(Option::SKIP, [
+return static function (RectorConfig $rectorConfig): void {
+    $rectorConfig->parallel();
+    $rectorConfig->paths([__DIR__.'/src', __DIR__.'/tests']);
+    $rectorConfig->phpVersion(PhpVersion::PHP_74);
+    $rectorConfig->phpstanConfig(__DIR__.'/phpstan-rector.neon');
+    $rectorConfig->skip([
         DateTimeToDateTimeInterfaceRector::class,
     ]);
-    $parameters->set(Option::AUTO_IMPORT_NAMES, true);
-    $parameters->set(Option::IMPORT_SHORT_CLASSES, false);
+    $rectorConfig->importNames();
+    $rectorConfig->parameters()->set(Option::IMPORT_SHORT_CLASSES, false);
 
-    $containerConfigurator->import(SetList::CODE_QUALITY);
-    $containerConfigurator->import(LevelSetList::UP_TO_PHP_74);
+    $rectorConfig->sets([
+        SetList::CODE_QUALITY,
+        LevelSetList::UP_TO_PHP_74,
+    ]);
 };
