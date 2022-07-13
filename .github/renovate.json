@@ -14,12 +14,6 @@
             "enabled": false
         },
         {
-            "matchDatasources": ["docker"],
-            "groupName": "Docker image dependencies",
-            "groupSlug": "docker",
-            "enabled": true
-        },
-        {
             "matchPaths": ["+(composer.json)"],
             "matchDepTypes": ["require"],
             "enabled": true,
