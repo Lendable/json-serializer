@@ -1,0 +1,37 @@
+{
+    "extends": [
+        "config:base"
+    ],
+    "rangeStrategy": "in-range-only",
+    "prHourlyLimit": 0,
+    "automerge": true,
+    "platformAutomerge": true,
+    "automergeType": "pr",
+    "automergeStrategy": "squash",
+    "packageRules": [
+        {
+            "matchPackagePatterns": ["*"],
+            "enabled": false
+        },
+        {
+            "matchPaths": ["+(composer.json)"],
+            "matchDepTypes": ["require"],
+            "enabled": true,
+            "groupName": "Composer runtime dependencies",
+            "groupSlug": "composer-runtime"
+        },
+        {
+            "matchPaths": ["+(composer.json)"],
+            "matchDepTypes": ["require-dev"],
+            "enabled": true,
+            "groupName": "Composer dev dependencies",
+            "groupSlug": "composer-dev"
+        },
+        {
+            "matchPaths": [".github/**"],
+            "enabled": true,
+            "groupName": "GitHub Actions dependencies",
+            "groupSlug": "github-actions"
+        }
+    ]
+}
