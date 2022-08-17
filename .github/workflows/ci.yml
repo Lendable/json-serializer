@@ -46,8 +46,8 @@ jobs:
       - name: "Run linting"
         run: "composer lint"
 
-      - name: "Run security check"
-        run: "composer security:check"
+      - name: "Run Composer audit"
+        run: "composer audit"
 
       - name: "Run coding style"
         if: ${{ matrix.php-version != '8.1' }} # php-cs-fixer does not run on 8.1 yet
