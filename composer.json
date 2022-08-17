@@ -46,9 +46,6 @@
   },
   "prefer-stable": true,
   "scripts": {
-    "security:check": [
-      "bin/local-php-security-checker"
-    ],
     "code-style:fix": [
       "PHP_CS_FIXER_FUTURE_MODE=1 php-cs-fixer fix --diff --ansi --using-cache=no"
     ],
@@ -88,7 +85,7 @@
       "@infection"
     ],
     "ci": [
-      "@security:check",
+      "@composer audit",
       "@static-analysis",
       "@code-style:check",
       "@tests:unit"
