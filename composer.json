@@ -60,7 +60,7 @@
       "@lint:php"
     ],
     "phpstan": [
-      "phpstan analyse --memory-limit=-1 src/ tests/ --ansi --no-progress"
+      "phpstan analyse --memory-limit=-1 src/ tests/ rector.php --ansi --no-progress"
     ],
     "rector:check": [
       "rector --dry-run --ansi --no-progress-bar"
