@@ -1,64 +1,6 @@
 {
-    "extends": [
-        "config:base"
-    ],
-    "rangeStrategy": "in-range-only",
-    "prHourlyLimit": 0,
-    "automerge": true,
-    "platformAutomerge": true,
-    "automergeType": "pr",
-    "automergeStrategy": "squash",
-    "lockFileMaintenance": {
-        "enabled": true,
-        "schedule": "before 11am every day"
-    },
-    "packageRules": [
-        {
-            "matchPackagePatterns": ["*"],
-            "enabled": false
-        },
-        {
-            "matchDatasources": ["docker"],
-            "enabled": true,
-            "groupName": "docker"
-        },
-        {
-            "matchPaths": ["+(composer.json)"],
-            "matchDepTypes": ["require"],
-            "enabled": true,
-            "groupName": "Composer runtime dependencies",
-            "groupSlug": "composer-runtime"
-        },
-        {
-            "matchPaths": ["+(composer.json)"],
-            "matchDepTypes": ["require-dev"],
-            "enabled": true,
-            "groupName": "Composer dev dependencies",
-            "groupSlug": "composer-dev"
-        },
-        {
-            "matchPaths": ["+(composer.json)"],
-            "matchDepTypes": ["require-dev"],
-            "enabled": true,
-            "matchPackageNames": [
-                "infection/infection",
-                "php-cs-fixer/shim",
-                "php-parallel-lint/php-parallel-lint",
-                "phpunit/phpunit",
-                "rector/rector"
-            ],
-            "matchPackagePatterns": [
-                "phpstan/*"
-            ],
-            "rangeStrategy": "bump",
-            "groupName": "Composer dev tooling dependencies",
-            "groupSlug": "composer-dev-tooling"
-        },
-        {
-            "matchPaths": [".github/**"],
-            "enabled": true,
-            "groupName": "GitHub Actions dependencies",
-            "groupSlug": "github-actions"
-        }
-    ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>Lendable/renovate-config"
+  ]
 }
