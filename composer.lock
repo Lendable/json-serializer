@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f71c56bf6ee96786a77b2ac5f4a851f",
+    "content-hash": "fe111b1f3f911da80928388f06cc91d6",
     "packages": [],
     "packages-dev": [
         {
@@ -1822,16 +1822,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.5",
+            "version": "0.15.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "b27945f63527b540dba09a4f4612bc738da9c285"
+                "reference": "81f82f74740caeeb556acb856aeb28b417bb67a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/b27945f63527b540dba09a4f4612bc738da9c285",
-                "reference": "b27945f63527b540dba09a4f4612bc738da9c285",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/81f82f74740caeeb556acb856aeb28b417bb67a7",
+                "reference": "81f82f74740caeeb556acb856aeb28b417bb67a7",
                 "shasum": ""
             },
             "require": {
@@ -1866,7 +1866,7 @@
             "description": "Instant Upgrade and Automated Refactoring of any PHP code",
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.5"
+                "source": "https://github.com/rectorphp/rector/tree/0.15.6"
             },
             "funding": [
                 {
@@ -1874,7 +1874,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-12T19:13:08+00:00"
+            "time": "2023-01-13T19:10:49+00:00"
         },
         {
             "name": "sanmai/later",
