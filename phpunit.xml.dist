@@ -3,11 +3,11 @@
          colors="true"
          bootstrap="vendor/autoload.php"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd">
-    <coverage>
+    <source>
         <include>
             <directory>./src/</directory>
         </include>
-    </coverage>
+    </source>
     <php>
         <ini name="error_reporting" value="E_ALL"/>
     </php>
