@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b77f9f2ff883fb1df12ea6b0629939dc",
+    "content-hash": "73e7f500a3b89588ae96d76a35109bb3",
     "packages": [],
     "packages-dev": [
         {
@@ -981,16 +981,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.19.2",
+            "version": "v3.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "698f24600c91fa7aca875956d615dccb2fa41f09"
+                "reference": "3253acf5cdb96383bb37ce7052e5dbf49a660f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/698f24600c91fa7aca875956d615dccb2fa41f09",
-                "reference": "698f24600c91fa7aca875956d615dccb2fa41f09",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/3253acf5cdb96383bb37ce7052e5dbf49a660f1e",
+                "reference": "3253acf5cdb96383bb37ce7052e5dbf49a660f1e",
                 "shasum": ""
             },
             "require": {
@@ -1027,9 +1027,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.19.2"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.20.0"
             },
-            "time": "2023-06-25T16:47:10+00:00"
+            "time": "2023-06-27T20:23:49+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
