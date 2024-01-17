@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9bbf0cffebf11bff7d33c5452301594",
+    "content-hash": "2973b453603f5fd21ab7d4a3e6509adf",
     "packages": [],
     "packages-dev": [
         {
@@ -981,16 +981,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.46.0",
+            "version": "v3.47.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "e9fc76796f284c050615937b9bd2df7688452c33"
+                "reference": "851a945ee0ae0f9d08c426ec2b1702bb34bd4ea2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/e9fc76796f284c050615937b9bd2df7688452c33",
-                "reference": "e9fc76796f284c050615937b9bd2df7688452c33",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/851a945ee0ae0f9d08c426ec2b1702bb34bd4ea2",
+                "reference": "851a945ee0ae0f9d08c426ec2b1702bb34bd4ea2",
                 "shasum": ""
             },
             "require": {
@@ -1027,9 +1027,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.46.0"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.47.1"
             },
-            "time": "2024-01-03T21:39:12+00:00"
+            "time": "2024-01-16T18:54:50+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -1826,16 +1826,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.19.0",
+            "version": "0.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "503f4ead06b3892bd106f67f3c86d4e36c94423d"
+                "reference": "2bba0dd55ba92c23f1253d9e60d0242a896d1025"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/503f4ead06b3892bd106f67f3c86d4e36c94423d",
-                "reference": "503f4ead06b3892bd106f67f3c86d4e36c94423d",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/2bba0dd55ba92c23f1253d9e60d0242a896d1025",
+                "reference": "2bba0dd55ba92c23f1253d9e60d0242a896d1025",
                 "shasum": ""
             },
             "require": {
@@ -1870,7 +1870,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.19.0"
+                "source": "https://github.com/rectorphp/rector/tree/0.19.1"
             },
             "funding": [
                 {
@@ -1878,7 +1878,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-09T00:49:06+00:00"
+            "time": "2024-01-15T18:02:43+00:00"
         },
         {
             "name": "sanmai/later",
