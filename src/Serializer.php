@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Lendable\Json;
 
-final class Serializer
+final readonly class Serializer
 {
     /**
      * @phpstan-param array<mixed> $data
