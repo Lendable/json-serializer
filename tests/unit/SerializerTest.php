@@ -4,25 +4,23 @@ declare(strict_types=1);
 
 namespace Tests\Lendable\Json\Unit;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Test;
 use Lendable\Json\DeserializationFailed;
 use Lendable\Json\InvalidDeserializedData;
 use Lendable\Json\SerializationFailed;
 use Lendable\Json\Serializer;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Lendable\Json\Serializer
- * @covers \Lendable\Json\SerializationFailed
- * @covers \Lendable\Json\DeserializationFailed
- * @covers \Lendable\Json\InvalidDeserializedData
- */
+#[CoversClass(Serializer::class)]
+#[CoversClass(SerializationFailed::class)]
+#[CoversClass(DeserializationFailed::class)]
+#[CoversClass(InvalidDeserializedData::class)]
 final class SerializerTest extends TestCase
 {
     private Serializer $serializer;
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_serialize_an_array_of_scalars_to_json(): void
     {
         $result = $this->serializer->serialize(['foo' => 'bar', 'baz' => [1.03, true, 'foobar'], 'emoji' => '😃', 'with_forward_slash' => 'foo/bar']);
@@ -30,9 +28,7 @@ final class SerializerTest extends TestCase
         $this->assertSame('{"foo":"bar","baz":[1.03,true,"foobar"],"emoji":"😃","with_forward_slash":"foo/bar"}', $result);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_when_serializing_if_an_error_encountered(): void
     {
         $this->expectException(SerializationFailed::class);
@@ -41,9 +37,7 @@ final class SerializerTest extends TestCase
         $this->serializer->serialize(["\xf0\x28\x8c\xbc" => 'bar']);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_can_deserialize_from_a_json_string_to_php_scalars(): void
     {
         $result = $this->serializer->deserialize('{"foo":"bar","baz":[1.03,true,"foobar"]}');
@@ -51,9 +45,7 @@ final class SerializerTest extends TestCase
         $this->assertSame(['foo' => 'bar', 'baz' => [1.03, true, 'foobar']], $result);
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_when_deserializing_if_an_error_encountered(): void
     {
         $this->expectException(DeserializationFailed::class);
@@ -62,9 +54,7 @@ final class SerializerTest extends TestCase
         $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function it_throws_when_deserializing_if_the_result_is_not_an_array(): void
     {
         $this->expectExceptionMessage(InvalidDeserializedData::class);
