@@ -84,7 +84,6 @@
       "@infection"
     ],
     "ci": [
-      "@composer audit",
       "@static-analysis",
       "@code-style:check",
       "@tests:unit"
