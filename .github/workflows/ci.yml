@@ -23,7 +23,7 @@ jobs:
           - "8.2"
           - "8.3"
         operating-system:
-          - "ubuntu-latest"
+          - "lendable-medium-dind-x64-linux"
 
     steps:
       - name: "Checkout"
