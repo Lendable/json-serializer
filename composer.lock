@@ -1238,16 +1238,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.84.0",
+            "version": "v3.85.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "8208dabb176cbc03a76df5a908220dfb75c0af9a"
+                "reference": "00a3dad9505df669736aaa8c017e6cc74e46075a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/8208dabb176cbc03a76df5a908220dfb75c0af9a",
-                "reference": "8208dabb176cbc03a76df5a908220dfb75c0af9a",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/00a3dad9505df669736aaa8c017e6cc74e46075a",
+                "reference": "00a3dad9505df669736aaa8c017e6cc74e46075a",
                 "shasum": ""
             },
             "require": {
@@ -1284,9 +1284,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.84.0"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.85.1"
             },
-            "time": "2025-07-15T18:22:22+00:00"
+            "time": "2025-07-29T22:23:17+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -1351,16 +1351,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.27",
+            "version": "1.12.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "3a6e423c076ab39dfedc307e2ac627ef579db162"
+                "reference": "fcf8b71aeab4e1a1131d1783cef97b23a51b87a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3a6e423c076ab39dfedc307e2ac627ef579db162",
-                "reference": "3a6e423c076ab39dfedc307e2ac627ef579db162",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fcf8b71aeab4e1a1131d1783cef97b23a51b87a9",
+                "reference": "fcf8b71aeab4e1a1131d1783cef97b23a51b87a9",
                 "shasum": ""
             },
             "require": {
@@ -1405,7 +1405,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-21T20:51:45+00:00"
+            "time": "2025-07-17T17:15:39+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -1892,16 +1892,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.27",
+            "version": "11.5.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "446d43867314781df7e9adf79c3ec7464956fd8f"
+                "reference": "93f30aa3889e785ac63493d4976df0ae9fdecb60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/446d43867314781df7e9adf79c3ec7464956fd8f",
-                "reference": "446d43867314781df7e9adf79c3ec7464956fd8f",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/93f30aa3889e785ac63493d4976df0ae9fdecb60",
+                "reference": "93f30aa3889e785ac63493d4976df0ae9fdecb60",
                 "shasum": ""
             },
             "require": {
@@ -1973,7 +1973,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.27"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.28"
             },
             "funding": [
                 {
@@ -1997,7 +1997,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-11T04:10:06+00:00"
+            "time": "2025-07-31T07:10:28+00:00"
         },
         {
             "name": "psr/container",
