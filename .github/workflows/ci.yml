@@ -20,8 +20,8 @@ jobs:
           - "highest"
           - "locked"
         php-version:
-          - "8.2"
           - "8.3"
+          - "8.4"
         operating-system:
           - "ubuntu-latest"
 
@@ -37,7 +37,7 @@ jobs:
           ini-values: memory_limit=-1
 
       - name: "Update Composer platform version"
-        if: ${{ matrix.dependencies != 'locked' && matrix.php-version != '8.2' }}
+        if: ${{ matrix.dependencies != 'locked' && matrix.php-version != '8.3' }}
         shell: bash
         run: "composer config platform.php ${{ matrix.php-version }}"
 
@@ -53,7 +53,7 @@ jobs:
         run: "composer lint"
 
       - name: "Run coding style"
-        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.2' }}
+        if: ${{ matrix.dependencies == 'locked' && matrix.php-version == '8.3' }}
         run: "composer code-style:check"
 
       - name: "Run PHPStan"
