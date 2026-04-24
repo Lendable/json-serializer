@@ -1,0 +1,14 @@
+.github/workflows/ci.yml
+  h_c23e50b5489c80 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "ef8c0b89757fe4e0ec677ed19bf687cbca43d344",
+  "prompts": {},
+  "humans": {
+    "h_c23e50b5489c80": {
+      "author": "Marcin Michalski"
+    }
+  }
+}
