@@ -24,9 +24,9 @@
   },
   "require-dev": {
     "infection/infection": "^0.33.2",
-    "php-cs-fixer/shim": "^3.95.2",
+    "php-cs-fixer/shim": "^3.95.4",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
-    "phpstan/phpstan": "^2.1.56",
+    "phpstan/phpstan": "^2.2.1",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.16",
     "phpstan/phpstan-strict-rules": "^2.0.11",

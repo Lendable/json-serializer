@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "080f62b6f82ff442e944a1753c67aad8",
+    "content-hash": "78e732dfb3ccbca231b6b6cde139c750",
     "packages": [],
     "packages-dev": [
         {
@@ -1133,16 +1133,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.95.2",
+            "version": "v3.95.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "319bd80c8db64ab5f7b79a19178299045bdb9957"
+                "reference": "886a7adcb685e30a9dadb484236621b011b267b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/319bd80c8db64ab5f7b79a19178299045bdb9957",
-                "reference": "319bd80c8db64ab5f7b79a19178299045bdb9957",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/886a7adcb685e30a9dadb484236621b011b267b9",
+                "reference": "886a7adcb685e30a9dadb484236621b011b267b9",
                 "shasum": ""
             },
             "require": {
@@ -1179,9 +1179,9 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.2"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.4"
             },
-            "time": "2026-05-15T09:21:09+00:00"
+            "time": "2026-06-03T18:03:14+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
@@ -1246,11 +1246,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.56",
+            "version": "2.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/93a603c9fc3be8c3c93bbc8d22170ad766685537",
-                "reference": "93a603c9fc3be8c3c93bbc8d22170ad766685537",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dea9c8f2d25cc849391042b71e429c1a4bf82660",
+                "reference": "dea9c8f2d25cc849391042b71e429c1a4bf82660",
                 "shasum": ""
             },
             "require": {
@@ -1272,6 +1272,17 @@
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ondřej Mirtes"
+                },
+                {
+                    "name": "Markus Staab"
+                },
+                {
+                    "name": "Vincent Langlet"
+                }
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
             "keywords": [
@@ -1295,7 +1306,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-26T17:04:57+00:00"
+            "time": "2026-05-28T14:44:12+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
