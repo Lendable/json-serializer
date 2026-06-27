@@ -23,15 +23,15 @@
     "php": ">=8.3,<9"
   },
   "require-dev": {
-    "infection/infection": "^0.33.2",
-    "php-cs-fixer/shim": "^3.95.8",
+    "infection/infection": "^0.33.3",
+    "php-cs-fixer/shim": "^3.95.10",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
     "phpstan/phpstan": "^2.2.2",
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.16",
     "phpstan/phpstan-strict-rules": "^2.0.11",
     "phpunit/phpunit": "^12.5.30",
-    "rector/rector": "^2.4.5"
+    "rector/rector": "^2.4.6"
   },
   "config": {
     "bin-dir": "bin",
