@@ -31,7 +31,7 @@
     "phpstan/phpstan-phpunit": "^2.0.16",
     "phpstan/phpstan-strict-rules": "^2.0.11",
     "phpunit/phpunit": "^12.5.30",
-    "rector/rector": "^2.5.1"
+    "rector/rector": "^2.5.2"
   },
   "config": {
     "bin-dir": "bin",
