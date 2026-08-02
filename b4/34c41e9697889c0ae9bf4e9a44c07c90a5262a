@@ -1,0 +1,14 @@
+rector.php
+  h_2bcd98c360af81 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "b434c41e9697889c0ae9bf4e9a44c07c90a5262a",
+  "prompts": {},
+  "humans": {
+    "h_2bcd98c360af81": {
+      "author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  }
+}
