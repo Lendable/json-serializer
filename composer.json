@@ -77,7 +77,7 @@
       "phpunit --colors --testsuite=unit --do-not-cache-result"
     ],
     "infection": [
-      "./bin/infection --threads=8 --only-covering-test-cases --min-msi=99 --show-mutations"
+      "./bin/infection --threads=8 --only-covering-test-cases --min-msi=100 --min-covered-msi=100 --show-mutations"
     ],
     "tests:unit": [
       "@phpunit:unit",
