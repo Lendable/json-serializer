@@ -1,0 +1,30 @@
+src/InvalidDeserializedData.php
+  s_fcdd765d728949::t_f320d87fcff98b 7
+tests/unit/SerializerTest.php
+  h_2bcd98c360af81 141-145
+src/Serializer.php
+  h_2bcd98c360af81 40
+  s_fcdd765d728949::t_2ecc9a3d4171d5 10
+  s_fcdd765d728949::t_6d27c9565df9d0 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.20",
+  "base_commit_sha": "da75ad1fb5cd044b69a8a23e7e2a38224e9452e3",
+  "prompts": {},
+  "humans": {
+    "h_2bcd98c360af81": {
+      "author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_fcdd765d728949": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6ac88b82-8e44-4449-a022-84d145b1fa0b",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  }
+}
