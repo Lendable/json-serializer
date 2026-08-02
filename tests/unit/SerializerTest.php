@@ -32,7 +32,7 @@ final class SerializerTest extends TestCase
     public function it_throws_when_serializing_if_an_error_encountered(): void
     {
         $this->expectException(SerializationFailed::class);
-        $this->expectExceptionMessage('Failed to serialize data to JSON. Error code: 5, error message: Malformed UTF-8 characters, possibly incorrectly encoded.');
+        $this->expectExceptionMessageIs('Failed to serialize data to JSON. Error code: 5, error message: Malformed UTF-8 characters, possibly incorrectly encoded.');
 
         $this->serializer->serialize(["\xf0\x28\x8c\xbc" => 'bar']);
     }
@@ -49,7 +49,7 @@ final class SerializerTest extends TestCase
     public function it_throws_when_deserializing_if_an_error_encountered(): void
     {
         $this->expectException(DeserializationFailed::class);
-        $this->expectExceptionMessage('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
+        $this->expectExceptionMessageIs('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
 
         $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
     }
@@ -57,8 +57,8 @@ final class SerializerTest extends TestCase
     #[Test]
     public function it_throws_when_deserializing_if_the_result_is_not_an_array(): void
     {
-        $this->expectExceptionMessage(InvalidDeserializedData::class);
-        $this->expectExceptionMessage('Expected array when deserializing JSON, got "boolean".');
+        $this->expectException(InvalidDeserializedData::class);
+        $this->expectExceptionMessageIs('Expected array when deserializing JSON, got "boolean".');
 
         $this->serializer->deserialize('true');
     }
