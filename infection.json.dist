@@ -6,16 +6,6 @@
     ]
   },
   "mutators": {
-    "@default": true,
-    "IncrementInteger": {
-      "ignoreSourceCodeByRegex": [
-        ".*json_decode.*"
-      ]
-    },
-    "DecrementInteger": {
-      "ignoreSourceCodeByRegex": [
-        ".*json_decode.*"
-      ]
-    }
+    "@default": true
   }
 }
