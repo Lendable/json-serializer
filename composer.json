@@ -20,7 +20,7 @@
     }
   },
   "require": {
-    "php": ">=8.3,<9"
+    "php": "^8.4"
   },
   "require-dev": {
     "infection/infection": "^0.34.0",
@@ -30,14 +30,14 @@
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.18",
     "phpstan/phpstan-strict-rules": "^2.0.12",
-    "phpunit/phpunit": "^12.5.32",
+    "phpunit/phpunit": "^13.2.6",
     "rector/rector": "^2.5.7"
   },
   "config": {
     "bin-dir": "bin",
     "sort-packages": true,
     "platform": {
-      "php": "8.3"
+      "php": "8.4.1"
     },
     "allow-plugins": {
       "infection/extension-installer": true
