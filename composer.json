@@ -30,7 +30,7 @@
     "phpstan/phpstan-deprecation-rules": "^2.0.4",
     "phpstan/phpstan-phpunit": "^2.0.18",
     "phpstan/phpstan-strict-rules": "^2.0.12",
-    "phpunit/phpunit": "^12.5.32",
+    "phpunit/phpunit": "^13.2.5",
     "rector/rector": "^2.5.7"
   },
   "config": {
