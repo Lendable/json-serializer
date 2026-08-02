@@ -138,11 +138,11 @@ final class SerializerTest extends TestCase
      */
     public static function provideNonArrayRoots(): iterable
     {
-        yield 'true' => ['true', 'boolean'];
-        yield 'false' => ['false', 'boolean'];
-        yield 'null' => ['null', 'NULL'];
-        yield 'integer' => ['5', 'integer'];
-        yield 'float' => ['1.5', 'double'];
+        yield 'true' => ['true', 'bool'];
+        yield 'false' => ['false', 'bool'];
+        yield 'null' => ['null', 'null'];
+        yield 'integer' => ['5', 'int'];
+        yield 'float' => ['1.5', 'float'];
         yield 'string' => ['"foo"', 'string'];
     }
 
