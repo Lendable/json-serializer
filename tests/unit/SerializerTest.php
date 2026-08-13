@@ -101,7 +101,7 @@ final class SerializerTest extends TestCase
     public function it_throws_when_deserializing_if_an_error_encountered(): void
     {
         $this->expectException(DeserializationFailed::class);
-        $this->expectExceptionMessageIs('Failed to deserialize data from JSON. Error code: 4, error message: Syntax error.');
+        $this->expectExceptionMessageMatches('/^Failed to deserialize data from JSON\. Error code: 4, error message: Syntax error(?: near location \d+:\d+)?\.$/');
 
         $this->serializer->deserialize('{"unclosed":"bad","object":"json"');
     }
@@ -118,7 +118,7 @@ final class SerializerTest extends TestCase
     public function it_throws_when_deserializing_json_nested_beyond_the_maximum_supported_depth(): void
     {
         $this->expectException(DeserializationFailed::class);
-        $this->expectExceptionMessageIs('Failed to deserialize data from JSON. Error code: 1, error message: Maximum stack depth exceeded.');
+        $this->expectExceptionMessageMatches('/^Failed to deserialize data from JSON\. Error code: 1, error message: Maximum stack depth exceeded(?: near location \d+:\d+)?\.$/');
 
         $this->serializer->deserialize($this->nestedArrays(self::MAX_NESTING_DEPTH + 1));
     }
