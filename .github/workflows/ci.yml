@@ -12,8 +12,11 @@ jobs:
   ci:
     name: "Execute"
     runs-on: ${{ matrix.operating-system }}
+    # PHP 8.6 is a nightly/pre-release build until GA, so its legs must not block merges.
+    continue-on-error: ${{ matrix.php-version == '8.6' }}
 
     strategy:
+      fail-fast: false
       matrix:
         dependencies:
           - "lowest"
@@ -22,6 +25,7 @@ jobs:
         php-version:
           - "8.4"
           - "8.5"
+          - "8.6"
         operating-system:
           - "ubuntu-latest"
 
