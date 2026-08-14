@@ -1,0 +1,32 @@
+name: agents-check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.agents/**'
+      - '.mcp.json'
+      - '.claude/**'
+      - '.codex/**'
+      - '.cursor/mcp.json'
+      - '.github/workflows/agents-check.yml'
+  merge_group:
+
+permissions: {}
+
+concurrency:
+  group: "agents-check-${{ github.head_ref || github.ref_name || github.run_id }}"
+  cancel-in-progress: true
+
+jobs:
+  agents-check:
+    runs-on: lendable-small-arm64-linux
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: Lendable/ai/packages/ai-agents-check-action@main
+        with:
+          artifactory-npm-token: ${{ secrets.ARTIFACTORY_NPM_ACCESS_TOKEN }}
