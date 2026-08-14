@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   agents-check:
-    runs-on: lendable-small-arm64-linux
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
