@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "assets": {
+    "skill:using-agents-cli": {
+      "source": "@lendable/ai-cli-using-agents-cli",
+      "version": "0.2.5",
+      "integrity": "sha256-d5FDwVQa1ASxxvuqrAYlmZZlpLj/tum9kdLjVtq1PRw=",
+      "paths": [
+        ".agents/skills/using-agents-cli/SKILL.md",
+        ".agents/skills/using-agents-cli/references/skill-quality-evaluation.md",
+        ".claude/skills/using-agents-cli"
+      ]
+    }
+  }
+}

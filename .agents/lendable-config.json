@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "adapters": {
+    "claude": {
+      "enabled": true
+    },
+    "cursor": {
+      "enabled": true
+    },
+    "codex": {
+      "enabled": true
+    }
+  }
+}

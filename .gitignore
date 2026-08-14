@@ -2,3 +2,6 @@
 /vendor
 phpunit.xml
 /.phpunit.result.cache
+
+# Lendable agents CLI tarball cache (Mode B / non-JS install path).
+.agents/.lendable-cache/

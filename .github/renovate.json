@@ -4,5 +4,12 @@
     "local>Lendable/renovate-config-public",
     ":semanticCommits",
     ":semanticCommitTypeAll(chore)"
+  ],
+  "packageRules": [
+    {
+      "description": "AI agent assets are upgraded by agents-upgrade so agents sync can materialise .agents outputs.",
+      "matchPackageNames": ["/^@lendable\\/ai-.*/"],
+      "enabled": false
+    }
   ]
 }
