@@ -2,6 +2,7 @@ name: agents-check
 
 on:
   pull_request:
+    branches: [master]
     paths:
       - '.agents/**'
       - '.mcp.json'
