@@ -1,0 +1,14 @@
+.github/CODEOWNERS
+  h_2bcd98c360af81 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "df3464a94187f2565bb147325f0dc704a9f469da",
+  "prompts": {},
+  "humans": {
+    "h_2bcd98c360af81": {
+      "author": "Marcin Michalski <evulmastah@gmail.com>"
+    }
+  }
+}
