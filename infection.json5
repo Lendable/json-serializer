@@ -8,5 +8,6 @@
   "mutators": {
     "@default": true
   },
-  "maxTimeouts": 0
+  "maxTimeouts": 0,
+  "staticAnalysisTool": "phpstan"
 }

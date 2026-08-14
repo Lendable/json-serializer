@@ -5,9 +5,13 @@ includes:
   - phar://vendor/phpstan/phpstan/phpstan.phar/conf/bleedingEdge.neon
 
 parameters:
+    paths:
+        - ./src
+        - ./tests
+        - ./rector.php
     level: max
     reportUnmatchedIgnoredErrors: false
     checkExplicitMixed: true
- 
+
     ignoreErrors:
         - '#Dynamic call to static method PHPUnit\\Framework\\.*#'
