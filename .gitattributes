@@ -4,7 +4,7 @@
 .gitignore              export-ignore
 .php-cs-fixer.php       export-ignore
 composer.lock           export-ignore -merge
-infection.json.dist     export-ignore
+infection.json5         export-ignore
 phpstan.neon            export-ignore
 phpstan-rector.neon     export-ignore
 phpunit.xml.dist        export-ignore
