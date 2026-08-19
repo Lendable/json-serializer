@@ -24,7 +24,7 @@
   "include-component-in-tag": false,
   "draft-pull-request": true,
   "release-type": "php",
-  "pull-request-title-pattern": "chore: release ${version}",
+  "pull-request-title-pattern": "chore(release): release ${version}",
   "pull-request-header": "New release",
   "pull-request-footer": "",
   "packages": {
