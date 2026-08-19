@@ -41,3 +41,45 @@ Deserializes a JSON string into an `array`.
 
 Throws `DeserializationFailed` on failure to deserialize.
 Throws `InvalidDeserializedData` if the data type of the resulting deserialized data is not an `array`.
+
+## Local development
+
+Everything runs inside Docker - no PHP or Composer is needed on the host. The
+environment is defined in `local/` (`Dockerfile`, `docker-compose.yaml`,
+`.env.dist`) and driven from the `Makefile`.
+
+### Prerequisites
+
+- Docker with Compose v2
+
+### Getting started
+
+```shell
+make up      # builds the image (on first run) and starts the container
+make shell   # opens a shell inside the container, in /app
+make down    # stops and removes the container
+```
+
+From the shell:
+
+```shell
+composer install
+composer ci
+```
+
+### Common targets
+
+| Target | Description |
+| --- | --- |
+| `make build` | Build the container image |
+| `make up` / `make down` | Start / tear down the environment |
+| `make start` / `make stop` / `make restart` | Control the running container |
+| `make ps` / `make logs` | Inspect the environment |
+| `make shell` | Shell into the container as the `app` user |
+| `make clean` | Tear down and remove the locally built image |
+
+### Xdebug
+
+Xdebug is installed but disabled by default. Copy `local/.env.dist` to
+`local/.env`, set `XDEBUG_ENABLED=1` (optionally with `XDEBUG_HOST`,
+`XDEBUG_PORT` and `XDEBUG_IDE_KEY`), then run `make restart`.
