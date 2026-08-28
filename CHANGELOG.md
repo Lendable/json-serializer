@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Lendable/json-serializer/compare/1.1.0...1.2.0) (2026-08-28)
+
+
+### Features
+
+* Require PHP 8.4 ([#697](https://github.com/Lendable/json-serializer/issues/697)) ([ee9b138](https://github.com/Lendable/json-serializer/commit/ee9b138691fdf38b5492528b9db7006685cf9e00))
+
 ## [1.1.0](https://github.com/Lendable/json-serializer/compare/1.0.5...1.1.0) (2026-04-18)
 
 
