@@ -6,7 +6,7 @@ on:
 
 jobs:
   sloth:
-    runs-on: [lendable-small-arm64-linux]
+    runs-on: [ubuntu-slim]
     steps:
       - name: Sloth
         uses: lendable/sloth@v1
