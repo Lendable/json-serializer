@@ -42,6 +42,11 @@
     },
     "allow-plugins": {
       "infection/extension-installer": true
+    },
+    "policy": {
+      "cooldown": {
+        "period": "7 days"
+      }
     }
   },
   "prefer-stable": true,
