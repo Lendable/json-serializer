@@ -1,0 +1,65 @@
+name: "Composer cache"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "composer-cache-${{ github.ref }}"
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - ".github/workflows/composer-cache.yaml"
+      - "composer.json"
+      - "composer.lock"
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+env:
+  COMPOSER_MAX_PARALLEL_HTTP: "4"
+
+jobs:
+  warm:
+    name: "Warm (PHP ${{ matrix.php-version }} with ${{ matrix.dependencies }} deps)"
+    runs-on: ${{ matrix.operating-system }}
+    continue-on-error: ${{ matrix.php-version == '8.6' }}
+
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        dependencies:
+          - "lowest"
+          - "highest"
+          - "locked"
+        php-version:
+          - "8.4"
+          - "8.5"
+          - "8.6"
+        operating-system:
+          - "ubuntu-latest"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1" # v7
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962" # 2.40.0
+        with:
+          coverage: "pcov"
+          php-version: "${{ matrix.php-version }}"
+          ini-values: memory_limit=-1
+
+      - name: "Update Composer platform version"
+        if: ${{ matrix.dependencies != 'locked' && matrix.php-version != '8.4' }}
+        shell: bash
+        run: "composer config platform.php ${{ matrix.php-version }}"
+
+      - name: "Warm Composer cache"
+        uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # 4.0.0
+        with:
+          dependency-versions: "${{ matrix.dependencies }}"
