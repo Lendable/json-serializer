@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd185e2f20835457bdb8f383a5fb2bd8",
+    "content-hash": "1c53bba049e05a6dc966297c182c9d6d",
     "packages": [],
     "packages-dev": [
         {
@@ -487,16 +487,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.35.11",
+            "version": "0.35.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "33fee9ed23977d42071cd796d6e369398f87e22a"
+                "reference": "7f572fb52bdf5b73f7f058c1f28b548b9cb6a295"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/33fee9ed23977d42071cd796d6e369398f87e22a",
-                "reference": "33fee9ed23977d42071cd796d6e369398f87e22a",
+                "url": "https://api.github.com/repos/infection/infection/zipball/7f572fb52bdf5b73f7f058c1f28b548b9cb6a295",
+                "reference": "7f572fb52bdf5b73f7f058c1f28b548b9cb6a295",
                 "shasum": ""
             },
             "require": {
@@ -611,7 +611,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.35.11"
+                "source": "https://github.com/infection/infection/tree/0.35.12"
             },
             "funding": [
                 {
@@ -623,8 +623,8 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-11-15T09:56:15+00:00",
-            "published-time": "2026-11-15T09:59:19+00:00"
+            "time": "2026-11-17T08:40:57+00:00",
+            "published-time": "2026-11-17T08:52:15+00:00"
         },
         {
             "name": "infection/mutator",
@@ -1140,16 +1140,16 @@
         },
         {
             "name": "php-cs-fixer/shim",
-            "version": "v3.95.31",
+            "version": "v3.95.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/shim.git",
-                "reference": "ecc5bd6c3a8151488dc6b9a81502655726bd0f1b"
+                "reference": "c95a290fc4486d4a68fb75f88d7b166f4141686a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/ecc5bd6c3a8151488dc6b9a81502655726bd0f1b",
-                "reference": "ecc5bd6c3a8151488dc6b9a81502655726bd0f1b",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/shim/zipball/c95a290fc4486d4a68fb75f88d7b166f4141686a",
+                "reference": "c95a290fc4486d4a68fb75f88d7b166f4141686a",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/shim/issues",
-                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.31"
+                "source": "https://github.com/PHP-CS-Fixer/shim/tree/v3.95.32"
             },
             "funding": [
                 {
@@ -1194,8 +1194,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-16T21:05:48+00:00",
-            "published-time": "2026-11-16T21:05:58+00:00"
+            "time": "2026-11-17T18:09:48+00:00",
+            "published-time": "2026-11-17T18:09:58+00:00"
         },
         {
             "name": "php-parallel-lint/php-parallel-lint",
