@@ -7,7 +7,7 @@ namespace Lendable\Json;
 final readonly class Serializer
 {
     /**
-     * @phpstan-param array<mixed> $data
+     * @param array<mixed> $data
      *
      * @throws SerializationFailed
      */
@@ -26,7 +26,7 @@ final readonly class Serializer
      * @throws DeserializationFailed
      * @throws InvalidDeserializedData
      *
-     * @phpstan-return array<mixed>
+     * @return array<mixed>
      */
     public function deserialize(string $json): array
     {
@@ -37,7 +37,7 @@ final readonly class Serializer
         }
 
         if (!\is_array($data)) {
-            throw new InvalidDeserializedData(\gettype($data));
+            throw new InvalidDeserializedData(\get_debug_type($data));
         }
 
         return $data;
